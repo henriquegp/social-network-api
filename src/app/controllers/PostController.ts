@@ -66,7 +66,7 @@ class PostController extends BaseController {
 
     try {
       const sqlFollowing = sequelize.literal(
-        `(SELECT followingId from follows where userId = ${id})`,
+        `Post.UserId in (SELECT followingId from follows where userId = ${id})`,
       );
 
       const sqlUserLike = sequelize.literal(`
@@ -78,7 +78,7 @@ class PostController extends BaseController {
 
       const where = {
         [Op.or]: [
-          { userId: postFollowing },
+          postFollowing,
           { userId: id },
         ],
       };

@@ -1,8 +1,9 @@
 # Social Network Api - Node.js
 
-Social Network RESTful API using Express and Typescript. 
+Social Network RESTful API using Express and Typescript.
 
 ## Getting Started
+
 First you need to have `Node`, `MySql` and `Redis` installed on your machine. Then, follow the instructions bellow to set up your dev environment.
 
 ### Installation
@@ -14,6 +15,7 @@ First you need to have `Node`, `MySql` and `Redis` installed on your machine. Th
 3. Run `npm run build` to transpile all typescript files.
 
 4. Run the sequelize migrations to create the database tables.
+
 ```bash
   npx sequelize db:migrate
 ```
@@ -22,14 +24,8 @@ First you need to have `Node`, `MySql` and `Redis` installed on your machine. Th
 
 6. Run `npm run queue` to start the e-mail queue
 
-7. Create folders to save the project images
-```bash
-  mkdir temp
-  cd temp
-  mkdir uploads
-```
-
 ## Features
+
 - TypeScript
 - Express
 - Socket.io
